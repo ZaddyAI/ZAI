@@ -2,8 +2,21 @@
 /**
  * Theme Functions.
  *
- * @package zai
+ * @package Zai
  */
+
+ if ( ! defined( 'ZAI_DIR_PATH' ) ) {
+	define( 'ZAI_DIR_PATH', untrailingslashit( get_template_directory() ) );
+}
+
+require_once ZAI_DIR_PATH . '/inc/helpers/autoloader.php';
+
+function zai_get_theme_instance() {
+	\ZAI_THEME\Inc\ZAI_THEME::get_instance();
+}
+
+zai_get_theme_instance();
+
 function zai_enqueue_scripts() {
 // Register Styles.
    wp_register_style('style-css', get_stylesheet_uri(), [], filemtime(get_stylesheet_directory(). '/style.css'), 'all');

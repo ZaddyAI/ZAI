@@ -2,7 +2,7 @@
 /**
  * Main template file.
  *
- * @package zai
+ * @package Zai
  */
 get_header();
 ?>
