@@ -80,7 +80,7 @@ trait Singleton {
 			 */
 			do_action( sprintf( 'zai_theme_singleton_init_%s', $called_class ) ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 
-		}Z
+		}
 
 		return $instance[ $called_class ];
 
